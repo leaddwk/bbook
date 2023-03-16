@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head class="s1">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <link rel="stylesheet" href="style2.css">
+    </head>
+    <body oncopy="return false" oncut="return false" onpaste="return false">
+        <section class="login-form">
+            <h1>로그인 서비스</h1>
+            <form action="">
+                <div class="home1">
+                    <button type="button" onclick="location.href='index.html'"><img src="images/homeb.png" width="40px" height="40px" alt=""></button>
+                </div>
+                <div class="btn1-area">
+                    <button type="submit" id="signInButton">다음 화면으로 가기</button>
+                </div>
+                <div class="caption">
+                    <a href="signup.html">이전 화면으로 가기</a>
+                </div>
+            </form>
+        <p id="special"> </p>
+        <script type="text/javascript">
+            const txt = document.getElementById("special");
+            const pagenum = 0;
+            const conlist = [
+                "image", "image", "image", "image", "image", "image", "image", "image", "image", "image", "image",
+                "<pre></pre>"
+            ];
+            for (const j = 0; j < conlist.length; j++) {
+                const a = j + 2;
+                txt.innerHTML = "<p>" + a + "쪽</p>";
+                if (conlist[j] == "image") {
+                    txt.innerHTML = "<p>image" + j + ".jpg</p>";
+                } else {
+                    txt.innerHTML = "<p>" + conlist[j] + "</p>";
+                }
+            }
+        </script>
+    </body>
+</html> 
+
+
+
+

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="stylesheet" href="style2.css">
+    <script>
+    function checkCookie() {
+        const username = sessionStorage.getItem('userin');
+        const btnElement = document.getElementById('ahe');
+        if (username == null) {
+            location.replace("login.html");
+        }
+        else {
+            btnElement.innerText = '로그인됨';
+            alert("다시 오셨군요! " + username + "님");
+            location.replace("pdfp.html");
+        }
+    }
+    // function memcheck() {
+    //     if (sessionStorage.getItem('userin') == null) {
+    //         location.replace("pdfp.html");
+    //     }
+    //     else {
+    //         location.replace("login.html");
+    //     }
+    // }
+    </script>
+</head>
+<body>
+    <section class="login-form">
+        <h1>메인화면</h1>
+        <form action="">
+            <div class="caption2">
+                <a href="signup.html">회원가입</a>
+            </div>
+            <div>
+                <style>
+                    div {
+                        text-align: center;
+                        max-width: 60%;
+                    }
+                </style>
+                <img src="images/goodpyo.jpg" width="250" alt="">
+            </div>
+            <div class="caption1">
+                <a href="javascript:checkCookie();" id="ahe">로그인 및 이동</a>
+            </div>
+            <!-- <div class="btn4-area">
+                <button onclick="location.href='javascript:memcheck();'">대출 및 보기</button>
+            </div> -->
+        </form>
+    </section>
+</body>
+</html>
